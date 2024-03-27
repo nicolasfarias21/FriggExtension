@@ -1,0 +1,34 @@
+);
+
+-- Cria a tabela Unidade
+CREATE TABLE Unidade (
+    IdUnidade INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Nome VARCHAR(200) UNIQUE NOT NULL,
+    EH VARCHAR(15) NOT NULL UNIQUE,
+    IdCoordenadoria INT,
+    Sigla VARCHAR(45),
+    Status BOOL NOT NULL,
+    FOREIGN KEY (IdCoordenadoria) REFERENCES Coordenadoria(IdCoordenadoria),
+);
+
+-- Cria a tabela Cargo
+CREATE TABLE Cargo (
+    IdCargo INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Nome VARCHAR(130) UNIQUE NOT NULL,
+    Status BOOL NOT NULL
+);
+
+-- Cria a tabela Ramal
+CREATE TABLE Ramal (
+    IdRamal INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Nome VARCHAR(90) NOT NULL,
+    IdCoordenadoria INT NOT NULL,
+    IdUnidade INT NOT NULL,
+    IdCargo INT NOT NULL,
+    Numero VARCHAR(21),
+    Status BOOL NOT NULL,
+    FOREIGN KEY (IdCoordenadoria) REFERENCES Coordenadoria(IdCoordenadoria),
+    FOREIGN KEY (IdUnidade) REFERENCES Unidade(IdUnidade),
+    FOREIGN KEY (IdCargo) REFERENCES Cargo(IdCargo)
+);
+
