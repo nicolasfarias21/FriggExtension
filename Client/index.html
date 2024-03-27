@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="PMSP_logo.ico" type="image/x-icon">
+
+    <title>Consulta de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-top">
+        <button id="btnNovaConsulta">⟳</button> 
+    </div>
+    <h1>Consulta de Contatos</h1>
+    <label for="consultaPor">Pesquisar por:</label>
+    <select id="consultaPor">
+        <option value="" selected disabled>Selecione uma opção</option> 
+        <option value="nome">Nome</option>
+        <option id="lbl_Departamento" value="departamento">Coordenadoria</option>
+    </select>
+
+    <select id="coordenadoriaSelect" style="display: none;"></select>
+
+    <div id="campoPesquisa"></div>
+
+    <p id="resultado"></p>
+    <div id="containerBotao"></div>
+    <div class="footer">
+        © Desenvolvedor: <a href="https://www.linkedin.com/in/nicolas-farias-99bb4323b/" target="_blank"> <strong>Nicolas Farias</strong></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
