@@ -22,7 +22,6 @@ export const getCargos = (_, res) => {
     ];
   
     try {
-      // Executa a consulta
       await db.query(q, values);
       return res.status(201).json('Cargo criado com sucesso!');
     } catch (err) {
