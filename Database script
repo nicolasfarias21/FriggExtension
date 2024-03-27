@@ -1,3 +1,10 @@
+CREATE DATABASE db_ramal;
+
+-- Cria a tabela Coordenadoria
+CREATE TABLE Coordenadoria (
+    IdCoordenadoria INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Nome VARCHAR(95) UNIQUE NOT NULL,
+    Status BOOL NOT NULL
 );
 
 -- Cria a tabela Unidade
