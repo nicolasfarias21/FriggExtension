@@ -1,2 +1,2 @@
 # FriggExtension
-Projeto Crud em React com Admin e User
+Projeto Crud em Javascript, React, NodeJS com Admin Side e User Side
